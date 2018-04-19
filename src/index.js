@@ -6,3 +6,15 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+
+// bundle.js (post Webpack digestion)
+function reveal(person, realIdentity) {
+  person.identity = realIdentity
+}
+
+const gutMensch = {
+  name: "Andrew Cohn",
+  identity: "Friendly Neighborhood Flatiron Teacher",
+}
+
+reveal(gutMensch, "Chrome Boi")
